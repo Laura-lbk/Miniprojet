@@ -135,6 +135,7 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
             public void onSuccess(Integer result) {
+                errorLabelRToA.setText(" ");
                 new DialogBoxInssetPresenter("Convertion Roman to arabe", valR.getText(), String.valueOf(result));
             }
         });
@@ -163,6 +164,7 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
             public void onSuccess(String result) {
+                errorLabelAToR.setText(" ");
                 new DialogBoxInssetPresenter("Convertion Arabe to Roman", valA.getText(), result);
             }
         });
@@ -186,6 +188,7 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
             public void onSuccess(String result) {
+                errorLabelD.setText(" ");
                 new DialogBoxInssetPresenter("Convertion Date", valD.getText(), result);
             }
         });
