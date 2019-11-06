@@ -201,7 +201,7 @@ public class PourcentagePresenter extends Composite {
 
             public void onSuccess(Integer result) {
                 montantErrorLabel.setText(" ");
-                new DialogBoxInssetPresenter("Votre remise est de : ", TBmontant.getText(), String.valueOf(result));
+                new DialogBoxInssetPresenter("Remise et prix", TBmontant.getText(), TBpourcent.getText(), String.valueOf(result));
             }
         });
     }
