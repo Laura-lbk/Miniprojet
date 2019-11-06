@@ -11,7 +11,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  *
  * @author user
  */
-public interface PourcentageServiceAsynch {
-    
+public interface PourcentageServiceAsync {
+
     void RemiseMontant(Integer p_montant, Integer p_pourcent, AsyncCallback<Integer> callback);
 }

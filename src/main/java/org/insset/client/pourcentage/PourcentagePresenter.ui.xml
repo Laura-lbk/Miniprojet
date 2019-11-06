@@ -6,16 +6,18 @@
     <menu:Menu ui:field="menu"/>
     <h1>Projet de mise en pratique Scrum</h1>       
     <div class="bs-section">
-
+        
+            
         <g:FlowPanel>
-          <g:FormPanel/>
-          
+            
             <g:FlowPanel>
-                <g:Label>Saisir un montant :</g:Label>
+                <g:Label>Saisir le montant avant remise:</g:Label>
             </g:FlowPanel>
+            
             <g:FlowPanel>          
               <g:TextBox ui:field="TBmontant" text="Entrer un montant.."/>
             </g:FlowPanel>
+            
             <g:FlowPanel>
                 <g:Label ui:field="montantErrorLabel" ></g:Label>
             </g:FlowPanel>
@@ -23,9 +25,11 @@
             <g:FlowPanel>
                 <g:Label>Saisir un pourcentage :</g:Label>
             </g:FlowPanel>
+            
             <g:FlowPanel>          
               <g:TextBox ui:field="TBpourcent" text="Entrer un pourcentage.."/>
             </g:FlowPanel>
+            
             <g:FlowPanel>
                 <g:Label ui:field="pourcentErrorLabel" ></g:Label>
             </g:FlowPanel>
@@ -34,7 +38,39 @@
                 <g:SubmitButton ui:field="boutonEnregistrer" text="Envoyer"/>
                 <g:ResetButton ui:field="boutonClear" text="Clear"/>
             </g:FlowPanel>
+            
+            
+            <g:FlowPanel>
+                <g:Label>Saisir le montant après remise:</g:Label>
+            </g:FlowPanel>
+            
+            <g:FlowPanel>          
+              <g:TextBox ui:field="TBmontant2" text="Entrer un montant.."/>
+            </g:FlowPanel>
+            
+            <g:FlowPanel>
+                <g:Label ui:field="montantErrorLabel2" ></g:Label>
+            </g:FlowPanel>
+            
+            <g:FlowPanel>
+                <g:Label>Saisir un pourcentage :</g:Label>
+            </g:FlowPanel>
+            
+            <g:FlowPanel>          
+              <g:TextBox ui:field="TBpourcent2" text="Entrer un pourcentage.."/>
+            </g:FlowPanel>
+            
+            <g:FlowPanel>
+                <g:Label ui:field="pourcentErrorLabel2" ></g:Label>
+            </g:FlowPanel>
+            
+            <g:FlowPanel ui:field="formActions2" >
+                <g:SubmitButton ui:field="boutonEnregistrer2" text="Envoyer"/>
+                <g:ResetButton ui:field="boutonClear2" text="Clear"/>
+            </g:FlowPanel>
+            
         </g:FlowPanel>
+        
     </div>
   </g:HTMLPanel>
 </ui:UiBinder>

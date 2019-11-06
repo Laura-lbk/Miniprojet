@@ -12,7 +12,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  *
  * @author user
  */
-@RemoteServiceRelativePath("pourcentage")
+@RemoteServiceRelativePath("pourcentageRemise")
 public interface PourcentageService extends RemoteService {
 
     Integer RemiseMontant(Integer p_montant, Integer p_pourcent) throws IllegalArgumentException;
