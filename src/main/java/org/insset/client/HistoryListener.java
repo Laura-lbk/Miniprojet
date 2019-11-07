@@ -8,8 +8,8 @@ package org.insset.client;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
-import org.insset.client.exemple.ExemplePresenter;
 import org.insset.client.calculator.CalculatorDecimalPresenter;
+import org.insset.client.pourcentage.PourcentagePresenter;
 
 /**
  *
@@ -26,14 +26,11 @@ public class HistoryListener implements ValueChangeHandler<String> {
             RootPanel.get().add(new CalculatorDecimalPresenter());
         }
 
-        //Accès a la page d'exemple
-        if (event.getValue().equals("exemple")) {
-            RootPanel.get().clear();
-            RootPanel.get().add(new ExemplePresenter());
-        }
-
         //Accès a la page pourcentage
-        //Add your code 
+        if (event.getValue().equals("pourcentage")) {
+            RootPanel.get().clear();
+            RootPanel.get().add(new PourcentagePresenter());
+        }
     }
 
 }
