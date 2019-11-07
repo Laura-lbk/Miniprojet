@@ -90,6 +90,13 @@ public class ExemplePresenter extends Composite {
             }
 
         });
+        
+        //Add a handler to clear the DialogBox quand tu clique dessus
+        nom.addClickHandler(new ClickHandler() {
+            public void onClick(ClickEvent event) {
+                nom.setText("");
+            }
+        });
     }
 
     private void contacterService() {
