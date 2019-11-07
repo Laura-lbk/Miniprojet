@@ -82,6 +82,15 @@ public class CalculatorDecimalPresenter extends Composite {
                 errorLabelRToA.setText("");
             }
         });
+        
+        //Reset de la textbox R au clic 
+        valR.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                valR.setText("");
+            }
+        });
+           
         boutonConvertRToA.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -89,6 +98,8 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
         });
+        
+        //
         boutonClearA.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -96,6 +107,15 @@ public class CalculatorDecimalPresenter extends Composite {
                 errorLabelAToR.setText("");
             }
         });
+        
+        //Reset de la textbox A au clic 
+        valA.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                valA.setText("");
+            }
+        });
+        
         boutonConvertAToR.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -110,6 +130,15 @@ public class CalculatorDecimalPresenter extends Composite {
                 errorLabelD.setText("");
             }
         });
+        
+        //Reset de la textbox D au clic 
+        valD.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                valD.setText("");
+            }
+        });
+        
         boutonConvertD.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {

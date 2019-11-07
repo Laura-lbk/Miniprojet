@@ -16,7 +16,7 @@ public class calculatorInsset implements EntryPoint {
         String initToken = History.getToken();
 
         if (initToken.length() == 0) {
-            History.newItem("exemple");
+            History.newItem("roman");
         }
 
         History.addValueChangeHandler(new HistoryListener());
