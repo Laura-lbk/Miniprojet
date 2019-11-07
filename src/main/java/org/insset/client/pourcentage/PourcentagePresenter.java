@@ -152,6 +152,7 @@ public class PourcentagePresenter extends Composite {
         }
         
         service.RemiseMontant(Integer.parseInt(TBmontant.getText()), Integer.parseInt(TBpourcent.getText()), new AsyncCallback<Integer>() {
+        
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
                 Window.alert(SERVER_ERROR);
@@ -159,7 +160,8 @@ public class PourcentagePresenter extends Composite {
 
             public void onSuccess(Integer result) {
                 montantErrorLabel.setText(" ");
-                new DialogBoxInssetPresenter("Votre remise est de : ", TBmontant.getText(), String.valueOf(result));
+                Integer total = Integer.parseInt(TBmontant.getText()) - result;
+                DialogBoxInssetPresenter dialogBoxInssetPresenter = new DialogBoxInssetPresenter("Remise et prix : ", TBmontant.getText(), TBpourcent.getText(), String.valueOf(result), String.valueOf(total));
             }
         });
     }
@@ -193,7 +195,7 @@ public class PourcentagePresenter extends Composite {
             return;
         }
         
-        service.RemiseMontant(Integer.parseInt(TBmontant.getText()), Integer.parseInt(TBpourcent.getText()), new AsyncCallback<Integer>() {
+        service.MontantAvantRemise(Integer.parseInt(TBmontant2.getText()), Integer.parseInt(TBpourcent2.getText()), new AsyncCallback<Integer>() {
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
                 Window.alert(SERVER_ERROR);
@@ -201,7 +203,8 @@ public class PourcentagePresenter extends Composite {
 
             public void onSuccess(Integer result) {
                 montantErrorLabel.setText(" ");
-                new DialogBoxInssetPresenter("Remise et prix", TBmontant.getText(), TBpourcent.getText(), String.valueOf(result));
+                Integer total = Integer.parseInt(TBmontant2.getText()) + result;
+                new DialogBoxInssetPresenter("Prix de départ", TBmontant2.getText(), TBpourcent2.getText(), String.valueOf(total));
             }
         });
     }

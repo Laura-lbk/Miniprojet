@@ -11,14 +11,11 @@
         <g:FlowPanel>
             
             <g:FlowPanel>
-                <g:Label>Saisir le montant avant remise:</g:Label>
+                <g:Label>Saisir le montant</g:Label>
             </g:FlowPanel>
             
             <g:FlowPanel>          
               <g:TextBox ui:field="TBmontant" text="Entrer un montant.."/>
-            </g:FlowPanel>
-            
-            <g:FlowPanel>
                 <g:Label ui:field="montantErrorLabel" ></g:Label>
             </g:FlowPanel>
             
@@ -28,9 +25,6 @@
             
             <g:FlowPanel>          
               <g:TextBox ui:field="TBpourcent" text="Entrer un pourcentage.."/>
-            </g:FlowPanel>
-            
-            <g:FlowPanel>
                 <g:Label ui:field="pourcentErrorLabel" ></g:Label>
             </g:FlowPanel>
             
@@ -41,7 +35,7 @@
             
             
             <g:FlowPanel>
-                <g:Label>Saisir le montant après remise:</g:Label>
+                <g:Label>Saisir le montant</g:Label>
             </g:FlowPanel>
             
             <g:FlowPanel>          
