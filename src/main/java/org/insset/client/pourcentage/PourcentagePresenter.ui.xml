@@ -35,7 +35,7 @@
             
             
             <g:FlowPanel>
-                <g:Label>Saisir le montant</g:Label>
+                <g:Label>Montant Payé</g:Label>
             </g:FlowPanel>
             
             <g:FlowPanel>          
@@ -47,7 +47,7 @@
             </g:FlowPanel>
             
             <g:FlowPanel>
-                <g:Label>Saisir un pourcentage :</g:Label>
+                <g:Label>Pourcentage de Remise :</g:Label>
             </g:FlowPanel>
             
             <g:FlowPanel>          
