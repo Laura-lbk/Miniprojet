@@ -96,6 +96,24 @@ public class PourcentagePresenter extends Composite {
                 pourcentErrorLabel.setText("");
             }
         });
+        
+        //Reset de la textbox R au clic 
+        TBmontant.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                TBmontant.setText("");
+            }
+        });
+        
+        //Reset de la textbox R au clic 
+        TBpourcent.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                TBpourcent.setText("");
+            }
+        });
+        
+        
         boutonEnregistrer.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -113,6 +131,23 @@ public class PourcentagePresenter extends Composite {
                 pourcentErrorLabel2.setText("");
             }
         });
+        
+        //Reset de la textbox R au clic 
+        TBmontant2.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                TBmontant2.setText("");
+            }
+        });
+        
+        //Reset de la textbox R au clic 
+        TBpourcent2.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                TBpourcent2.setText("");
+            }
+        });
+        
         boutonEnregistrer2.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -203,8 +238,7 @@ public class PourcentagePresenter extends Composite {
 
             public void onSuccess(Integer result) {
                 montantErrorLabel.setText(" ");
-                Integer total = Integer.parseInt(TBmontant2.getText()) + result;
-                new DialogBoxInssetPresenter("Prix de départ", TBmontant2.getText(), TBpourcent2.getText(), String.valueOf(total));
+                new DialogBoxInssetPresenter("Prix de départ", TBmontant2.getText(), TBpourcent2.getText(), String.valueOf(result));
             }
         });
     }

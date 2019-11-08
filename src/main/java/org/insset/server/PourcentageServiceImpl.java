@@ -19,15 +19,21 @@ public class PourcentageServiceImpl extends RemoteServiceServlet implements
     @Override
     public Integer RemiseMontant(Integer p_montant, Integer p_pourcent) throws IllegalArgumentException {
         
-        int remise = p_pourcent * (p_montant/100);
+        int remise = (p_pourcent*p_montant)/100;
                 
         return remise;
     }
     
     public Integer MontantAvantRemise(Integer p_montant, Integer p_pourcent) throws IllegalArgumentException {
         
-        int remise = p_pourcent / (1-(p_montant/100));
-                
-        return remise;
+        double montant = p_montant;
+        double pourcent = p_pourcent;
+        
+        double remise = montant / (1-(pourcent/100));
+        
+        int vrairemise = (int) Math.round(remise);
+        
+        return vrairemise;
+        
     }
 }
